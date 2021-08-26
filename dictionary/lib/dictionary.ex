@@ -1,6 +1,5 @@
 defmodule Dictionary do
   
-
   def random_word do
     #Enum.random(word_list())
     word_list()
@@ -14,4 +13,18 @@ defmodule Dictionary do
     |> File.read! 
     |> String.split(~r/\n/)
   end
+
+  def read_file({ :ok, file }) do 
+    file
+    |> IO.read(:line)
+  end
+
+  def read_file({ :error, reason }) do 
+    #use Logger
+    #Logger.error("File error: #{reason}")
+    #[]
+    IO.puts "File error: #{reason}"
+  end
+  
+
 end
