@@ -1,0 +1,4 @@
+%{
+  "graphql": {:hex, :graphql, "0.3.2", "0aa7a00948c456831f8fa1bb4ead3e4e15d145b8656902134d180d1369775dff", [:mix], [], "hexpm", "08b635bfe8383ccb6b250c9b586322e79dda2edac42f541f44730cc5fa218007"},
+  "inflex": {:hex, :inflex, "2.1.0", "a365cf0821a9dacb65067abd95008ca1b0bb7dcdd85ae59965deef2aa062924c", [:mix], [], "hexpm", "14c17d05db4ee9b6d319b0bff1bdf22aa389a25398d1952c7a0b5f3d93162dd8"},
+}
