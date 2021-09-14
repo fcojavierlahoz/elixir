@@ -102,4 +102,26 @@ test "lost game is recognized" do
 
   end
 
+  test "validate guess" do
+    game = Game.new_game("test")
+    {game,guess} = Game.validate_guess(game,"e")
+    assert guess == "e"
+    assert game.game_state == :good_guess
+    {game,guess} = Game.validate_guess(game,"E")
+    assert game.game_state == :bad_guess
+    {game,guess} = Game.validate_guess(game,"EN")
+    assert game.game_state == :bad_guess
+    {game,guess} = Game.validate_guess(game,"En")
+    assert game.game_state == :bad_guess
+
+    game = Game.make_move(game,"t")
+    assert game.game_state == :good_guess
+    assert game.turns_left == 7
+
+    game = Game.make_move(game,"TE")
+    assert game.game_state == :bad_guess
+
+
+  end
+
 end

@@ -28,7 +28,8 @@ defmodule Hangman.Game do
 	'''
 
 	def make_move(game,guess) do
-		accept_move(game, guess, MapSet.member?(game.used,guess))
+		{game, guess} = validate_guess(game,guess)
+		validate_move(game, guess, game.game_state)
 	end
 
 	def tally(game) do
@@ -40,6 +41,30 @@ defmodule Hangman.Game do
 	end
 
 	######## private
+	def validate_guess(game,guess) do
+		validate_guess(game,guess,guess |> String.match?(~r/^[a-z]/))
+	end
+
+	defp validate_guess(game,guess, _good_guess = true) do 
+		{%{ game |
+		   game_state: :good_guess, 
+		},guess}
+	end
+
+	defp validate_guess(game,guess, _not_good_guess ) do 
+		{%{ game |
+		   game_state: :bad_guess, 
+		},guess}
+	end
+
+	def validate_move(game, guess, _game_state = :good_guess) do
+		accept_move(game, guess, MapSet.member?(game.used,guess))
+	end
+
+	def validate_move(game, guess, _game_state = :bad_guess) do
+		game
+	end
+
 	defp accept_move(game,_guess,_already_guessed = true) do
 		Map.put(game, :game_state, :already_used)
 	end
