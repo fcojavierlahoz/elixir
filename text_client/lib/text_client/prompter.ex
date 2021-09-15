@@ -3,9 +3,9 @@ defmodule TextClient.Prompter do
 	alias TextClient.State
 
 	def accept_move(game = %State{}) do
-		IO.gets("Your guess: ")
+		#IO.gets("Your guess: ")
 		#Enum.concat([?a..?z]) |> Enum.take_random(1) |> List.to_string
-		#["e", "t", "a", "i", "o", "n", "s", "h", "r"] |> Enum.take_random(1) |> List.to_string
+		["e", "t", "a", "i", "o", "n", "s", "h", "r","w","g","b","u","c","l"] |> Enum.take_random(1) |> List.to_string
 		|> check_input(game)
 	end
 

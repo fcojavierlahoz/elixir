@@ -15,7 +15,7 @@ defmodule Hangman.Game do
 	end
 
 	def new_game() do
-		new_game(Dictionary.random_word)
+		new_game(Dictionary.start |> Dictionary.random_word)
 	end
 
 	def make_move(game = %{game_state: state}, _guess) when state in [:won,:lost] do
@@ -43,17 +43,17 @@ defmodule Hangman.Game do
 	end
 
 	######## private
-	defp validate_guess(game,guess) do
+	def validate_guess(game,guess) do
 		validate_guess(game,guess,guess |> String.match?(~r/^[a-z]/))
 	end
 
-	defp validate_guess(game,guess, _good_guess = true) do 
+	def validate_guess(game,guess, _good_guess = true) do 
 		{%{ game |
 		   game_state: :good_guess, 
 		},guess}
 	end
 
-	defp validate_guess(game,guess, _not_good_guess ) do 
+	def validate_guess(game,guess, _not_good_guess ) do 
 		{%{ game |
 		   game_state: :bad_guess, 
 		},guess}

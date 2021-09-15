@@ -8,8 +8,8 @@ defmodule TextClient.Player do
 		exit_with_message("You Won!!")
 	end
 
-	def play(%State{tally: %{ game_state: :lost}}) do
-		exit_with_message("Sorry, you Lost!!")
+	def play(game = %State{tally: %{ game_state: :lost}}) do
+		exit_with_message("Sorry, you Lost!! Letters:  #{Enum.join(game.game_service.letters, "")}")
 	end
 
 	def play(game = %State{tally: %{ game_state: :good_guess}}) do
