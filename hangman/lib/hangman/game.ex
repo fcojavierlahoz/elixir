@@ -28,6 +28,7 @@ defmodule Hangman.Game do
 	'''
 
 	def make_move(game,guess) do
+		#accept_move(game, guess, MapSet.member?(game.used,guess))
 		{game, guess} = validate_guess(game,guess)
 		validate_move(game, guess, game.game_state)
 	end
@@ -37,11 +38,12 @@ defmodule Hangman.Game do
 			game_state: game.game_state,
 			turns_left: game.turns_left,
 			letters:    game.letters |> reveal_guessed(game.used),
+			used:       game.used,
 		}
 	end
 
 	######## private
-	def validate_guess(game,guess) do
+	defp validate_guess(game,guess) do
 		validate_guess(game,guess,guess |> String.match?(~r/^[a-z]/))
 	end
 
@@ -61,7 +63,7 @@ defmodule Hangman.Game do
 		accept_move(game, guess, MapSet.member?(game.used,guess))
 	end
 
-	def validate_move(game, guess, _game_state = :bad_guess) do
+	def validate_move(game, _guess, _game_state = :bad_guess) do
 		game
 	end
 
@@ -99,7 +101,6 @@ defmodule Hangman.Game do
 
 	defp reveal_letter(letter, _in_word = true), 	do: letter
 	defp reveal_letter(_letter, _not_in_word), do: "_"
-
 
 	defp maybe_won(true), do: :won
 	defp maybe_won(_), 	 do: :good_guess
