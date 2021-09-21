@@ -1,3 +1,5 @@
-# Elixir proyect
+# Elixir proyects
 # 
-## First proyect: Servy
+## - Servy
+## 
+## - Hangman
