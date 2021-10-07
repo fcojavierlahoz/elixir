@@ -1,0 +1,592 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"st",
+				"start"
+			],
+			[
+				"s",
+				"start_link"
+			],
+			[
+				"do",
+				"doc"
+			],
+			[
+				"le",
+				"letters"
+			],
+			[
+				"ga",
+				"game_state"
+			],
+			[
+				"gm",
+				"game_state"
+			],
+			[
+				"al",
+				"already_used"
+			],
+			[
+				"rea",
+				"reason"
+			],
+			[
+				"r",
+				"random"
+			],
+			[
+				"re",
+				"response"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "lib/hangman.ex",
+			"redo_stack":
+			[
+				[
+					27,
+					1,
+					"cut",
+					null,
+					"AQAAABgAAAAAAAAAOAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGAAAAAAAAAAYAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					19,
+					1,
+					"insert",
+					{
+						"characters": "@javi"
+					},
+					"BQAAADYAAAAAAAAANgAAAAAAAAABAAAAaTUAAAAAAAAANQAAAAAAAAABAAAAdjQAAAAAAAAANAAAAAAAAAABAAAAYTMAAAAAAAAAMwAAAAAAAAABAAAAajIAAAAAAAAAMgAAAAAAAAABAAAAQA",
+					"AQAAAAAAAAABAAAANwAAAAAAAAA3AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					18,
+					1,
+					"left_delete",
+					null,
+					"AQAAADIAAAAAAAAAMwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAMgAAAAAAAAAyAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					17,
+					1,
+					"insert",
+					{
+						"characters": ":"
+					},
+					"AQAAADIAAAAAAAAAMgAAAAAAAAABAAAAOg",
+					"AQAAAAAAAAABAAAAMwAAAAAAAAAzAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					16,
+					1,
+					"insert_completion",
+					{
+						"completion": "hangman",
+						"format": "text",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "hangman"
+					},
+					"AgAAACsAAAAAAAAAKwAAAAAAAAAHAAAAaGFuZ21hbisAAAAAAAAAMAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAMgAAAAAAAAAyAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					15,
+					1,
+					"insert",
+					{
+						"characters": ":hanga"
+					},
+					"BwAAAC8AAAAAAAAALwAAAAAAAAABAAAAYS4AAAAAAAAALgAAAAAAAAABAAAAZy0AAAAAAAAALQAAAAAAAAABAAAAbiwAAAAAAAAALAAAAAAAAAABAAAAYSsAAAAAAAAAKwAAAAAAAAABAAAAaCwAAAAAAAAALgAAAAAAAAAAAAAAKgAAAAAAAAAqAAAAAAAAAAEAAAA6",
+					"AQAAAAAAAAABAAAAMAAAAAAAAAAwAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					11,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAACsAAAAAAAAAKwAAAAAAAAACAAAAICAqAAAAAAAAACoAAAAAAAAAAQAAAAo",
+					"AQAAAAAAAAABAAAALQAAAAAAAAAtAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					10,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAACkAAAAAAAAAKQAAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAKgAAAAAAAAAqAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					9,
+					1,
+					"insert",
+					{
+						"characters": "_server"
+					},
+					"BwAAACgAAAAAAAAAKAAAAAAAAAABAAAAcicAAAAAAAAAJwAAAAAAAAABAAAAZSYAAAAAAAAAJgAAAAAAAAABAAAAdiUAAAAAAAAAJQAAAAAAAAABAAAAciQAAAAAAAAAJAAAAAAAAAABAAAAZSMAAAAAAAAAIwAAAAAAAAABAAAAcyIAAAAAAAAAIgAAAAAAAAABAAAAXw",
+					"AQAAAAAAAAABAAAAKQAAAAAAAAApAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					8,
+					1,
+					"insert",
+					{
+						"characters": "ngman"
+					},
+					"BQAAACEAAAAAAAAAIQAAAAAAAAABAAAAbiAAAAAAAAAAIAAAAAAAAAABAAAAYR8AAAAAAAAAHwAAAAAAAAABAAAAbR4AAAAAAAAAHgAAAAAAAAABAAAAZx0AAAAAAAAAHQAAAAAAAAABAAAAbg",
+					"AQAAAAAAAAABAAAAIgAAAAAAAAAiAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					7,
+					1,
+					"left_delete",
+					null,
+					"AQAAAB0AAAAAAAAAHgAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAHQAAAAAAAAAdAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					6,
+					1,
+					"insert",
+					{
+						"characters": "@han"
+					},
+					"BAAAAB0AAAAAAAAAHQAAAAAAAAABAAAAbhwAAAAAAAAAHAAAAAAAAAABAAAAYRsAAAAAAAAAGwAAAAAAAAABAAAAaBoAAAAAAAAAGgAAAAAAAAABAAAAQA",
+					"AQAAAAAAAAABAAAAHgAAAAAAAAAeAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					5,
+					1,
+					"left_delete",
+					null,
+					"AQAAABoAAAAAAAAAGwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGgAAAAAAAAAaAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					4,
+					1,
+					"insert",
+					{
+						"characters": "\n#"
+					},
+					"AwAAABoAAAAAAAAAGgAAAAAAAAABAAAAIxgAAAAAAAAAGAAAAAAAAAACAAAAICAXAAAAAAAAABcAAAAAAAAAAQAAAAo",
+					"AQAAAAAAAAABAAAAGwAAAAAAAAAbAAAAAAAAAAAAAAAAAPC/"
+				]
+			],
+			"settings":
+			{
+				"buffer_size": 328,
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+			]
+		},
+		{
+			"file": "lib/hangman/game.ex",
+			"settings":
+			{
+				"buffer_size": 2611,
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+			]
+		},
+		{
+			"file": "lib/hangman/server.ex",
+			"settings":
+			{
+				"buffer_size": 414,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/hangman/application.ex",
+			"settings":
+			{
+				"buffer_size": 315,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "mix.exs",
+			"settings":
+			{
+				"buffer_size": 655,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 124.0,
+		"history":
+		[
+			"Enum.",
+			"h GenServer",
+			"compile \"dictionary.ex\"",
+			"c \"dictionary.ex\"",
+			"c \"Dictionary.ex\"",
+			"Dictionary.random_word()",
+			"1+1",
+			"ls -lrt"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/javierlahoz/Documents/elixir/hangman",
+		"/Users/javierlahoz/Documents/elixir/hangman/lib",
+		"/Users/javierlahoz/Documents/elixir/hangman/lib/hangman"
+	],
+	"file_history":
+	[
+		"/Users/javierlahoz/Documents/elixir/dictionary/lib/dictionary/application.ex",
+		"/Users/javierlahoz/Documents/elixir/dictionary/lib/dictionary.sublime-project",
+		"/Users/javierlahoz/Documents/elixir/hangman/lib/hangman/server.ex",
+		"/Users/javierlahoz/Documents/elixir/hangman/lib/hangman/application.ex",
+		"/Users/javierlahoz/Documents/elixir/hangman/lib/hangman.ex",
+		"/Users/javierlahoz/Documents/elixir/hangman/lib/hangman/game.ex",
+		"/Users/javierlahoz/Documents/elixir/hangman/test/game_test.exs",
+		"/Users/javierlahoz/Documents/elixir/text_client/lib/text_client.ex",
+		"/Users/javierlahoz/Documents/elixir/text_client/lib/text_client/interact.ex",
+		"/Users/javierlahoz/Documents/elixir/text_client/lib/text_client/player.ex",
+		"/Users/javierlahoz/Documents/elixir/text_client/lib/text_client/mover.ex",
+		"/Users/javierlahoz/Documents/elixir/text_client/lib/text_client/summary.ex",
+		"/Users/javierlahoz/Documents/elixir/text_client/lib/text_client/prompter.ex",
+		"/Users/javierlahoz/Documents/elixir/dictionary/lib/dictionary/word_list.ex",
+		"/Users/javierlahoz/Documents/elixir/code/procs.exs",
+		"/Users/javierlahoz/Documents/elixir/text_client/lib/text_client/state.ex",
+		"/Users/javierlahoz/Documents/elixir/dictionary/lib/lists.ex",
+		"/Users/javierlahoz/Documents/elixir/hangman/test/hangman_test.exs",
+		"/Users/javierlahoz/Documents/elixir/hangman/mix.exs",
+		"/Users/javierlahoz/Documents/elixir/dictionary/lib/Lists",
+		"/Users/javierlahoz/Documents/elixir/servy/lib/servy/handler.ex",
+		"/Users/javierlahoz/Documents/elixir/dictionary/mix.sublime-workspace",
+		"/Users/javierlahoz/Documents/elixir/servy/lib/servy.ex"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "lib/hangman.ex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 328,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								23,
+								23
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Elixir/Syntaxes/Elixir.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "lib/hangman/game.ex",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2611,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								162,
+								162
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Elixir/Syntaxes/Elixir.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "lib/hangman/server.ex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 414,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								213,
+								213
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Elixir/Syntaxes/Elixir.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 76.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "lib/hangman/application.ex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 315,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								130,
+								130
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Elixir/Syntaxes/Elixir.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 25.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "mix.exs",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 655,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Elixir/Syntaxes/Elixir.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 120.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Elixir/Elixir - elixir $file.sublime-build",
+	"project": "hangman.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/elixir/dictionary/lib/dictionary.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 209.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

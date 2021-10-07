@@ -1,0 +1,26 @@
+<section class="phx-hero">
+  <!-- %= inspect @tally %> -->
+
+  <h1> <%= game_state(@tally.game_state) %> </h1> 
+
+  <%= if game_over?(@tally) do %>
+      <h2><b>Words: <%= get_result(@tally) %> </b></h2>
+  <% else %>
+      <h2>Words so far: <%= get_letter(@tally) %> </h2> 
+  <% end %> 
+
+  <h2>Turns:        <%= @tally.turns_left %></h2> 
+  <h2>Used:         <%= get_used(@tally) %></h2> 
+  
+</section>
+
+<section>
+    <%= if game_over?(@tally) do %>
+      <%= new_game_button(@conn) %>
+    <% else %>
+      <%= form_for(@conn, Routes.hangman_path(@conn, :make_move), [ as: :make_move, method: :put], fn f -> %>
+      <%= text_input(f, :guess) %>
+      <%= submit("Make next move") %>
+      <% end) %>
+    <% end %>  
+</section>

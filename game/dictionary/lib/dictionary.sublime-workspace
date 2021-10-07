@@ -1,0 +1,284 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"st",
+				"start"
+			],
+			[
+				"s",
+				"start_link"
+			],
+			[
+				"do",
+				"doc"
+			],
+			[
+				"le",
+				"letters"
+			],
+			[
+				"ga",
+				"game_state"
+			],
+			[
+				"gm",
+				"game_state"
+			],
+			[
+				"al",
+				"already_used"
+			],
+			[
+				"rea",
+				"reason"
+			],
+			[
+				"r",
+				"random"
+			],
+			[
+				"re",
+				"response"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "dictionary.ex",
+			"settings":
+			{
+				"buffer_size": 173,
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					1,
+					1,
+					"revert",
+					null,
+					"AgAAAAAAAAAAAAAAAAAAAAAAAACtAAAAZGVmbW9kdWxlIERpY3Rpb25hcnkgZG8KICAKICBhbGlhcyBEaWN0aW9uYXJ5LldvcmRfbGlzdAoKICAjZGVmZGVsZWdhdGUgc3RhcnQoKSwgICAgICAgICAgICAgICAgdG86IFdvcmRfbGlzdCwgYXM6IDp3b3JkX2xpc3QKICBkZWZkZWxlZ2F0ZSByYW5kb21fd29yZCgpLCB0bzogV29yZF9saXN0CgplbmQAAAAAAAAAAK0AAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 124.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/javierlahoz/Documents/elixir/dictionary/lib/dictionary.sublime-project",
+		"/Users/javierlahoz/Documents/elixir/hangman/lib/hangman/server.ex",
+		"/Users/javierlahoz/Documents/elixir/hangman/lib/hangman/application.ex",
+		"/Users/javierlahoz/Documents/elixir/hangman/lib/hangman.ex",
+		"/Users/javierlahoz/Documents/elixir/hangman/lib/hangman/game.ex",
+		"/Users/javierlahoz/Documents/elixir/hangman/test/game_test.exs",
+		"/Users/javierlahoz/Documents/elixir/text_client/lib/text_client.ex",
+		"/Users/javierlahoz/Documents/elixir/text_client/lib/text_client/interact.ex",
+		"/Users/javierlahoz/Documents/elixir/text_client/lib/text_client/player.ex",
+		"/Users/javierlahoz/Documents/elixir/text_client/lib/text_client/mover.ex",
+		"/Users/javierlahoz/Documents/elixir/text_client/lib/text_client/summary.ex",
+		"/Users/javierlahoz/Documents/elixir/dictionary/lib/dictionary/application.ex",
+		"/Users/javierlahoz/Documents/elixir/text_client/lib/text_client/prompter.ex",
+		"/Users/javierlahoz/Documents/elixir/dictionary/lib/dictionary/word_list.ex",
+		"/Users/javierlahoz/Documents/elixir/code/procs.exs",
+		"/Users/javierlahoz/Documents/elixir/text_client/lib/text_client/state.ex",
+		"/Users/javierlahoz/Documents/elixir/dictionary/lib/lists.ex",
+		"/Users/javierlahoz/Documents/elixir/hangman/test/hangman_test.exs",
+		"/Users/javierlahoz/Documents/elixir/hangman/mix.exs",
+		"/Users/javierlahoz/Documents/elixir/dictionary/lib/Lists",
+		"/Users/javierlahoz/Documents/elixir/servy/lib/servy/handler.ex",
+		"/Users/javierlahoz/Documents/elixir/dictionary/mix.sublime-workspace",
+		"/Users/javierlahoz/Documents/elixir/servy/lib/servy.ex"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "dictionary.ex",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 173,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								173,
+								173
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Elixir/Syntaxes/Elixir.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Elixir/Elixir - elixir $file.sublime-build",
+	"project": "dictionary.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/elixir/dictionary/lib/dictionary.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 209.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
