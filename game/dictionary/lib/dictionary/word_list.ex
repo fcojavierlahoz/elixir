@@ -7,7 +7,7 @@ defmodule Dictionary.Word_list do
   end
 
   def word_list() do
-    "/Users/javierlahoz/Documents/elixir/dictionary/assets/words.txt" 
+    "/Users/javierlahoz/Documents/elixir/game/dictionary/assets/words.txt" 
     |> File.read! 
     |> String.split(~r/\n/)
   end
