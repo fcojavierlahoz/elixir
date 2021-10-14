@@ -24,8 +24,8 @@ defmodule BwKafka do
       ],
       batchers: [
         default: [
-          batch_size: 100,
-          batch_timeout: 1000,
+          batch_size: 1000,
+          batch_timeout: 5000,
           concurrency: 2
         ]
       ]
@@ -41,12 +41,20 @@ defmodule BwKafka do
   @impl true
   def handle_batch(_, messages, _, _) do
     list = messages |> Enum.map(fn e -> e.data end)
-    IO.inspect(list, label: "Got batch")
+    #IO.inspect(list, label: "Got batch")
+    hdfs(list)
     messages
   end
 
   defp process_data(data) do
     IO.inspect(data, label: "Got message")
+  end
+
+  defp hdfs(message) do
+    name = "test-" <> Integer.to_string(:os.system_time(:millisecond))
+    {:ok, response } = HTTPoison.put("http://localhost:50070/webhdfs/v1/tmp/test/#{name}?user.name=hadoop&op=CREATE") 
+    {"Location", path} = List.keyfind(response.headers,"Location",0) 
+    HTTPoison.put(path,message,[],[])
   end
 
 
