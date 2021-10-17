@@ -19,18 +19,18 @@ defmodule BwKafka do
              group_id: @kafka_group,
              topics: [@kafka_topics]
            ]},
-        concurrency: 2
+        concurrency: Application.fetch_env!(:bw_kafka, :producers) 
       ],
       processors: [
         default: [
-          concurrency: 4 
+          concurrency: Application.fetch_env!(:bw_kafka, :processors) 
         ]
       ],
       batchers: [
         default: [
           batch_size: 10000,
           batch_timeout: 5000,
-          concurrency: 2
+          concurrency: Application.fetch_env!(:bw_kafka, :batchers) 
         ]
       ]
     )
