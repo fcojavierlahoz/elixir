@@ -1,7 +1,11 @@
 defmodule BwKafka do
 
-  use Broadway
+  @kafka_hosts  Application.fetch_env!(:bw_kafka, :hosts)
+  @kafka_group  Application.fetch_env!(:bw_kafka, :group)
+  @kafka_topics Application.fetch_env!(:bw_kafka, :topics)
 
+  use Broadway
+  
   alias Broadway.Message
 
   def start_link(_opts) do
@@ -11,9 +15,9 @@ defmodule BwKafka do
         module:
           {BroadwayKafka.Producer,
            [
-             hosts: [localhost: 9092],
-             group_id: "group_1",
-             topics: ["test1"]
+             hosts: @kafka_hosts,
+             group_id: @kafka_group,
+             topics: [@kafka_topics]
            ]},
         concurrency: 2
       ],
@@ -24,7 +28,7 @@ defmodule BwKafka do
       ],
       batchers: [
         default: [
-          batch_size: 1000,
+          batch_size: 10000,
           batch_timeout: 5000,
           concurrency: 2
         ]
@@ -35,26 +39,15 @@ defmodule BwKafka do
   @impl true
   def handle_message(_, message, _) do
     message
-    |> Message.update_data(&process_data/1)
+    |> Message.update_data(&BwKafka.Transform.process_data/1)
   end
 
   @impl true
   def handle_batch(_, messages, _, _) do
-    list = messages |> Enum.map(fn e -> e.data end)
+    list = messages |> Enum.map(fn e -> e.data <> "\n" end)
     #IO.inspect(list, label: "Got batch")
-    hdfs(list)
+    BwKafka.Hdfs.put(list)
     messages
-  end
-
-  defp process_data(data) do
-    IO.inspect(data, label: "Got message")
-  end
-
-  defp hdfs(message) do
-    name = "test-" <> Integer.to_string(:os.system_time(:millisecond))
-    {:ok, response } = HTTPoison.put("http://localhost:50070/webhdfs/v1/tmp/test/#{name}?user.name=hadoop&op=CREATE") 
-    {"Location", path} = List.keyfind(response.headers,"Location",0) 
-    HTTPoison.put(path,message,[],[])
   end
 
 
