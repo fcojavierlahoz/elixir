@@ -27,10 +27,14 @@ defmodule BwKafka do
         ]
       ],
       batchers: [
-        default: [
+        hdfs: [
           batch_size: 10000,
           batch_timeout: 5000,
-          concurrency: Application.fetch_env!(:bw_kafka, :batchers) 
+          concurrency: Application.fetch_env!(:bw_kafka, :batchers),
+        ],
+        solr: [
+          batch_size: 10000,
+          batch_timeout: 5000,
         ]
       ]
     )
@@ -40,13 +44,19 @@ defmodule BwKafka do
   def handle_message(_, message, _) do
     message
     |> Message.update_data(&BwKafka.Transform.process_data/1)
+    |> Message.put_batcher(:hdfs)
   end
 
   @impl true
-  def handle_batch(_, messages, _, _) do
-    list = messages |> Enum.map(fn e -> e.data <> "\n" end)
-    #IO.inspect(list, label: "Got batch")
-    BwKafka.Hdfs.put(list)
+  def handle_batch(:hdfs, messages, _, _) do
+    messages
+    |> BwKafka.Hdfs.put()
+    messages
+  end
+
+  @impl true
+  def handle_batch(:solr, messages, _, _) do
+    IO.inspect "Got Solr"
     messages
   end
 
