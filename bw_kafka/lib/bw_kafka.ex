@@ -28,8 +28,7 @@ defmodule BwKafka do
       ],
       batchers: [
         hdfs: [
-          batch_size: 10000,
-          batch_timeout: 5000,
+          batch_size: Application.fetch_env!(:bw_kafka, :batch_size),
           concurrency: Application.fetch_env!(:bw_kafka, :batchers),
         ],
         solr: [
@@ -45,6 +44,12 @@ defmodule BwKafka do
     message
     |> Message.update_data(&BwKafka.Transform.process_data/1)
     |> Message.put_batcher(:hdfs)
+  end
+
+  @impl true
+  def handle_message(:solr, message, _) do
+    message
+    |> Message.put_batcher(:solr)
   end
 
   @impl true
