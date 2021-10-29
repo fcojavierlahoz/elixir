@@ -17,12 +17,20 @@ defmodule BwKafka do
            [
              hosts: @kafka_hosts,
              group_id: @kafka_group,
-             topics: [@kafka_topics]
+             topics: [@kafka_topics],
+             client_config: [
+               #ssl: true
+               #ssl_options: [
+               # cacertfile: File.cwd!() <> "/ssl/ca-cert",
+               # certfile: File.cwd!() <> "/ssl/cert.pem",
+               # keyfile: File.cwd!() <> "/ssl/key.pem"
+               # ]
+             ] 
            ]},
         concurrency: Application.fetch_env!(:bw_kafka, :producers) 
       ],
       processors: [
-        default: [
+        hdfs: [
           concurrency: Application.fetch_env!(:bw_kafka, :processors) 
         ]
       ],
@@ -32,21 +40,20 @@ defmodule BwKafka do
           concurrency: Application.fetch_env!(:bw_kafka, :batchers),
         ],
         solr: [
-          batch_size: 10000,
-          batch_timeout: 5000,
+          batch_size: 1000,
         ]
       ]
     )
   end
 
   @impl true
-  def handle_message(_, message, _) do
+  def handle_message(:hdfs, message, _) do
     message
     |> Message.update_data(&BwKafka.Transform.process_data/1)
+    #|> Message.put_batcher(:solr)
     |> Message.put_batcher(:hdfs)
   end
 
-  @impl true
   def handle_message(:solr, message, _) do
     message
     |> Message.put_batcher(:solr)
@@ -54,6 +61,7 @@ defmodule BwKafka do
 
   @impl true
   def handle_batch(:hdfs, messages, _, _) do
+    IO.inspect "Got Batch HDFS"
     messages
     |> BwKafka.Hdfs.put()
     messages
@@ -61,7 +69,7 @@ defmodule BwKafka do
 
   @impl true
   def handle_batch(:solr, messages, _, _) do
-    IO.inspect "Got Solr"
+    IO.inspect "Got Batch Solr"
     messages
   end
 
