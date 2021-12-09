@@ -5,7 +5,8 @@ defmodule BwKafka.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      { BwKafka, [] }
+      { BwKafka, [] },
+      { MyXQL, host: "localhost", protocol: :tcp, database: "test", username: "root", password: "password", name: :myxql},
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

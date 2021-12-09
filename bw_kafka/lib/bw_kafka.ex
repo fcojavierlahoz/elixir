@@ -3,6 +3,8 @@ defmodule BwKafka do
   @kafka_hosts  Application.fetch_env!(:bw_kafka, :hosts)
   @kafka_group  Application.fetch_env!(:bw_kafka, :group)
   @kafka_topics Application.fetch_env!(:bw_kafka, :topics)
+  @kafka_keytab Application.fetch_env!(:bw_kafka, :keytab)
+  @kafka_principal Application.fetch_env!(:bw_kafka, :principal)
 
   use Broadway
   
@@ -19,18 +21,15 @@ defmodule BwKafka do
              group_id: @kafka_group,
              topics: [@kafka_topics],
              client_config: [
-               #ssl: true
-               #ssl_options: [
-               # cacertfile: File.cwd!() <> "/ssl/ca-cert",
-               # certfile: File.cwd!() <> "/ssl/cert.pem",
-               # keyfile: File.cwd!() <> "/ssl/key.pem"
-               # ]
+               #sasl: {:plain,"user","password"}
+               #sasl: {:callback, :brod_gssapi, {:gssapi, @kafka_keytab, @kafka_principal}},
+               #ssl: [cacertfile: "/tmp/test/priv/ca.crt", certfile: "/tmp/test/priv/client.crt", keyfile: "/tmp/test/priv/client.key", password: 'test1234'],
              ] 
            ]},
         concurrency: Application.fetch_env!(:bw_kafka, :producers) 
       ],
       processors: [
-        hdfs: [
+        mysql: [
           concurrency: Application.fetch_env!(:bw_kafka, :processors) 
         ]
       ],
@@ -38,9 +37,13 @@ defmodule BwKafka do
         hdfs: [
           batch_size: Application.fetch_env!(:bw_kafka, :batch_size),
           concurrency: Application.fetch_env!(:bw_kafka, :batchers),
+          batch_timeout: 10000,
         ],
         solr: [
           batch_size: 1000,
+        ],
+        mysql: [
+          batch_size: 10000,
         ]
       ]
     )
@@ -59,6 +62,12 @@ defmodule BwKafka do
     |> Message.put_batcher(:solr)
   end
 
+  def handle_message(:mysql, message, _) do
+    message
+    |> Message.update_data(&BwKafka.Transform.insert_data/1)
+    |> Message.put_batcher(:hdfs)
+  end
+
   @impl true
   def handle_batch(:hdfs, messages, _, _) do
     IO.inspect "Got Batch HDFS"
@@ -73,5 +82,10 @@ defmodule BwKafka do
     messages
   end
 
+  @impl true
+  def handle_batch(:mysql, messages, _, _) do
+    IO.inspect "Got Batch Mysql"
+    messages
+  end
 
 end
